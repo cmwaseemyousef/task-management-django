@@ -1,15 +1,19 @@
-# Ignore Python virtual environment
+# Python virtual environment
 venv/
 
-# Ignore compiled Python files
+# Python cache and compiled files
 __pycache__/
 *.pyc
 
-# Ignore SQLite DB (optional)
+# SQLite database files
+*.sqlite3
 db.sqlite3
 
-# VS Code settings (optional)
-.vscode/
-
-# Environment files (optional)
+# Environment variables
 .env
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
