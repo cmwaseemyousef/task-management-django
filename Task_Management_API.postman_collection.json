@@ -1,0 +1,156 @@
+{
+	"info": {
+		"name": "Task Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"superadmin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "token", ""]
+						}
+					}
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh\": \"your_refresh_token_here\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "token", "refresh", ""]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "List Tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer your_access_token_here"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "tasks", ""]
+						}
+					}
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer your_access_token_here"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"API Test Task\",\n    \"description\": \"Task created via API\",\n    \"assigned_to\": 4,\n    \"due_date\": \"2025-06-10\",\n    \"status\": \"pending\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "tasks", ""]
+						}
+					}
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer your_access_token_here"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"completed\",\n    \"completion_report\": \"Task completed via API\",\n    \"worked_hours\": 2.5\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/1/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "tasks", "1", ""]
+						}
+					}
+				},
+				{
+					"name": "Get Task Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer your_access_token_here"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/1/report/",
+							"protocol": "http",
+							"host": ["127.0.0.1"],
+							"port": "8000",
+							"path": ["api", "tasks", "1", "report", ""]
+						}
+					}
+				}
+			]
+		}
+	]
+}
