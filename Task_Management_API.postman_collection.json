@@ -19,7 +19,8 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"superadmin\",\n    \"password\": \"admin123\"\n}"
+							"raw": "{\n    \"username\": \"{{USERNAME}}\",\n    \"password\": \"{{PASSWORD}}\"\n}"
+
 						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/token/",
