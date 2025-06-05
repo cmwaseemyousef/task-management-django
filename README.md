@@ -81,3 +81,24 @@ python manage.py runserver
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
+## 📸 Project Screenshots
+
+### 🔐 Login Page
+![Login](screenshots/Screenshot_5.jpg)
+
+### 📊 SuperAdmin Dashboard
+![Dashboard](screenshots/Screenshot_3.1.jpg)
+![Tasks and Users](screenshots/Screenshot_3.2.jpg)
+
+### 🔑 JWT Token Endpoint (DRF)
+![Token](screenshots/Screenshot_4.1.jpg)
+
+### 🧪 Token Test Form
+![Token Test](screenshots/Screenshot_4.2.jpg)
+
+### 🚧 Task API Endpoint
+![Tasks API](screenshots/Screenshot_2.jpg)
+
+### ⚙️ Django Admin Panel
+![Admin](screenshots/Screenshot_1.jpg)
